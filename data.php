@@ -55,7 +55,7 @@ if ($loggedIn){
 		
 		
 		
-		$query = mysqli_query($connection,"select * from kasutaja_142463 where id='$user'");
+		$query = mysqli_query($connection,"select * from cm_user where id='$user'");
 	
 		$row = $query->fetch_array(MYSQL_BOTH);
 
@@ -80,10 +80,10 @@ if ($loggedIn){
 		$sql="";
 		if($_FILES["ch_pic"]["tmp_name"] != ""){
 			$sql = "update cm_user set username='$username', password='$password', firstname='$fname', lastname='$lname'," .
-					" gender='$gender', email='$email', pilt='$pic', welcom='$greeting' where id='$user';";
+					" gender='$gender', email='$email', pilt='$pic', welcome='$greeting' where id='$user';";
 		} else {
-			sql = "update cm_user set username='$username', password='$password', firstname='$fname', lastname='$lname'," .
-					" gender='$gender', email='$email', welcom='$greeting' where id='$user';";
+			$sql = "update cm_user set username='$username', password='$password', firstname='$fname', lastname='$lname'," .
+					" gender='$gender', email='$email', welcome='$greeting' where id='$user';";
 		}
 		
 		$query = mysqli_query($connection, $sql);
