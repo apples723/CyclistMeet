@@ -9,8 +9,10 @@ if(empty($_POST['username']) || empty($_POST['password'])) {
 	$pass=htmlspecialchars($_POST['password']);
 	
 	echo $user;
+	echo $pass;
 	$query = mysqli_query($connection, "select * from cm_user where username = '$user' and password = '$pass'");
-	echo $query
+	$row = $result->fetch_array(MYSQL_BOTH);
+	$row['id'];
 	$rowCount = mysqli_num_rows($query);
 	
 	if($rowCount == 1) {
