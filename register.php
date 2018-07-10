@@ -28,7 +28,7 @@ if(empty($_POST['username']) || empty($_POST['password']) || empty($_POST['passw
 	
 	$gender = $_POST['gender'];
 	
-	$sql = "insert into cm_users(username,password,firstname,lastname,email,gender) values " .
+	$sql = "insert into cm_user(username,password,firstname,lastname,email,gender) values " .
 		   "('$username','$password','$fname','$lname','$email','$gender')";
 	
 	$query = mysqli_query($connection,$sql);

@@ -7,12 +7,12 @@ $message = "";
 $message2="";
 if ($loggedIn){
 	$user = $_SESSION['user'];
-	$query = mysqli_query($connection,"select * from cm_users where id='$id'");
+	$query = mysqli_query($connection,"select * from cm_user where id='$id'");
 	$row = $query->fetch_array(MYSQL_BOTH);
 	
 	$gender = $row['gender'];
 	$sql="SELECT id,
-username, first name, last name, gender, email, picture, welcome FROM cm_users WHERE NOT id='$user' AND NOT gender='$gender' AND NOT id IN (SELECT kylastatus_id FROM cm_kylastus WHERE kylastaja_id='$user') ORDER BY kasutajanimi ASC LIMIT 1";
+username, first name, last name, gender, email, picture, welcome FROM cm_user WHERE NOT id='$user' AND NOT gender='$gender' AND NOT id IN (SELECT user_up_id FROM cm_data WHERE user_id='$user') ORDER BY username ASC LIMIT 1";
 	$result = mysqli_query($connection,$sql);
 	$rowCount = mysqli_num_rows($result);
 	if ($rowCount==0){

@@ -7,7 +7,7 @@ $data_about_visiters = "";
 if ($loggedIn){
 	include('session.php');
 	$user = $_SESSION['user'];
-	$query = mysqli_query($connection,"select * from kasutaja_142463 where id=$user");
+	$query = mysqli_query($connection,"select * from cm_user where id=$user");
 	$row = $query->fetch_array(MYSQL_BOTH);
 	$fname = $row['firstname'];
 	$lname = $row['lastname'];
@@ -17,7 +17,7 @@ if ($loggedIn){
 	$greeting = $row['welecome'];
 	
 	
-	$sql= "SELECT cm_users.username, cm_data.timestamp, cm_data.yesorno FROM cm_user,cm_data where cm_data.id=user_up_id and cm_data.user_id = $user";
+	$sql= "SELECT cm_user.username, cm_data.timestamp, cm_data.yesorno FROM cm_user,cm_data where cm_data.id=user_up_id and cm_data.user_id = $user";
 	$query = mysqli_query($connection,$sql);
 	$rowCount = mysqli_num_rows($query);
 

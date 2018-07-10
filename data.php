@@ -7,7 +7,7 @@ $good_message = "Sisesta uued andmed.";
 $pic_error_message = "";
 if ($loggedIn){
 	$user = $_SESSION['user'];
-	$query = mysqli_query($connection,"select * from cm_users where id=$user");
+	$query = mysqli_query($connection,"select * from cm_user where id=$user");
 	
 	$row = $query->fetch_array(MYSQL_BOTH);
 
