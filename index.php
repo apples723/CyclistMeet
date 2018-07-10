@@ -9,15 +9,15 @@ if ($loggedIn){
 	$user = $_SESSION['user'];
 	$query = mysqli_query($connection,"select * from kasutaja_142463 where id=$user");
 	$row = $query->fetch_array(MYSQL_BOTH);
-	$fname = $row['eesnimi'];
-	$lname = $row['perekonnanimi'];
-	$gender = $row['sugu'];
+	$fname = $row['firstname'];
+	$lname = $row['lastname'];
+	$gender = $row['gender'];
 	$email = $row['email'];
 	$pic = $row['pilt'];
-	$greeting = $row['tervitus'];
+	$greeting = $row['welecome'];
 	
 	
-	$sql= "SELECT kasutaja_142463.kasutajanimi, kylastus_142463.timestamp, kylastus_142463.hinnang FROM kasutaja_142463,kylastus_142463 where kasutaja_142463.id=kylastus_142463.kylastaja_id and kylastus_142463.kylastatu_id = $user";
+	$sql= "SELECT cm_users.username, cm_data.timestamp, cm_data.yesorno FROM cm_user,cm_data where cm_data.id=user_up_id and cm_data.user_id = $user";
 	$query = mysqli_query($connection,$sql);
 	$rowCount = mysqli_num_rows($query);
 
@@ -27,7 +27,7 @@ if ($loggedIn){
 
 	while ($row = mysqli_fetch_array($query)) {
 		$timestamp= $row['timestamp'];
-		$visiter= $row['kasutajanimi'];
+		$visiter= $row['username'];
 		$opinion= $row['hinnang'];
 		if ($opinion == "l"){
 			$opinion = "LIKE";

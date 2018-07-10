@@ -27,15 +27,14 @@ SET time_zone = "+00:00";
 --
 
 DROP TABLE IF EXISTS kylastus;
-CREATE TABLE IF NOT EXISTS cm_kylastus (
+CREATE TABLE IF NOT EXISTS cm_data (
   id int(7) NOT NULL AUTO_INCREMENT,
   `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  kylastaja_id int(11) NOT NULL,
-  kylastatu_id int(11) NOT NULL,
-  hinnang char(1) CHARACTER SET utf8 COLLATE utf8_estonian_ci NOT NULL,
-  PRIMARY KEY (id),
-  KEY kylastaja_id (kylastaja_id,kylastatu_id,hinnang)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf16 COLLATE=utf16_estonian_ci AUTO_INCREMENT=72 ;
+  user_up_id int(11) NOT NULL,
+  user_id int(11) NOT NULL,
+  yesorno char(1) CHARACTER SET utf8 COLLATE utf8_estonian_ci NOT NULL,
+  PRIMARY KEY (id)
+)ENGINE=InnoDB  DEFAULT CHARSET=utf16 COLLATE=utf16_estonian_ci AUTO_INCREMENT=72 ;
 
 
 
@@ -57,10 +56,10 @@ CREATE TABLE IF NOT EXISTS `cm_user` (
   pilt longblob,
   welcome text COLLATE utf16_estonian_ci,
   PRIMARY KEY (id),
-  UNIQUE KEY kasutajanimi (kasutajanimi),
+  UNIQUE KEY username (username),
   UNIQUE KEY email (email),
-  KEY eesnimi (eesnimi,perekonnanimi,email),
-  KEY sugu (sugu)
+  KEY firstname (firstname,lastname,email),
+  KEY genders (gender)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf16 COLLATE=utf16_estonian_ci COMMENT='Sisaldab andmeid sotsiaalse võrgustiku kasutajatest.' AUTO_INCREMENT=19 ;
 
 
