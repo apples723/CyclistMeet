@@ -7,6 +7,7 @@ $good_message = "Sisesta uued andmed.";
 $pic_error_message = "";
 if ($loggedIn){
 	$user = $_SESSION['user'];
+	echo $user;
 	$query = mysqli_query($connection,"select * from cm_user where id=$user");
 	
 	$row = $query->fetch_array(MYSQL_BOTH);
@@ -104,28 +105,28 @@ if ($loggedIn){
 <html>
 <head>
 <meta charset="utf-8">
-<title>Andmete muutmine</title>
+<title>Update Account</title>
 <link rel="stylesheet" type="text/css" href="styles/main.css">
 </head>
 <body>
 <div id="container">
-<h1>Andmete muutmine</h1>
-<h3><?=htmlentities($username,ENT_QUOTES)?> andmed</h3>
+<h1>Update Account<h1>
+<h3><?=htmlentities($username,ENT_QUOTES)?> Update</h3>
 <p style="color:red;"><?=$pic_error_message?></p>
 <p style="color:red;"><?=$good_message?></p>
 <form method="post" id="ch_form" enctype="multipart/form-data">
 <input type="hidden" id="ch_action" name="ch_action" value="go"></input>
-<label for="ch_username">Kasutajanimi: </label><input type="text" id="ch_username" name="ch_username" maxlength="15" size="25" value=<?=htmlentities($username,ENT_QUOTES)?>></input>
+<label for="ch_username">Kasutajanimi: </label><input type="text" id="ch_username" name="ch_username" maxlength="15" size="25" value=<?echo $username?>></input>
 
-<label>Parool: </label><input type="password" id="ch_password" name="ch_password" maxlength="30" size="25" value=<?=htmlentities($password,ENT_QUOTES)?>></input>
+<label>Password: </label><input type="password" id="ch_password" name="ch_password" maxlength="30" size="25" value=<?=htmlentities($password,ENT_QUOTES)?>></input>
 
-<label>Eesnimi: </label><input type="text" id="ch_fname" name="ch_fname" maxlength="70" size="25" value=<?=htmlentities($fname,ENT_QUOTES)?>></input>
+<label>First Name: </label><input type="text" id="ch_fname" name="ch_fname" maxlength="70" size="25" value=<?=htmlentities($fname,ENT_QUOTES)?>></input>
 
-<label>Perenimi: </label><input type="text" id="ch_lname" name="ch_lname" maxlength="70" size="25" value=<?=htmlentities($lname,ENT_QUOTES)?>></input>
+<label>Last Name: </label><input type="text" id="ch_lname" name="ch_lname" maxlength="70" size="25" value=<?=htmlentities($lname,ENT_QUOTES)?>></input>
 
-<label>E-post: </label><input type="email" id="ch_email" name="ch_email" maxlength="50" size="25" value=<?=htmlentities($email,ENT_QUOTES)?>></input>
+<label>Email: </label><input type="email" id="ch_email" name="ch_email" maxlength="50" size="25" value=<?=htmlentities($email,ENT_QUOTES)?>></input>
 
-<label id="gender_label">Sugu: </label>
+<label id="gender_label">Gender: </label>
 <?php
 	if($gender == "m"){
 		echo '<input type="radio" id="man" name="ch_gender" value="m" checked><label for="man">mees</label>'
@@ -142,7 +143,7 @@ if ($loggedIn){
 	}
 
 ?>
-<label id="picture_label">Pilt: </label><input type="file" accept="image/*" id="ch_pic" name="ch_pic"></input>
+<label id="picture_label">Picture: </label><input type="file" accept="image/*" id="ch_pic" name="ch_pic"></input>
 
 <?php if ($pic==""){
 } else {
@@ -150,7 +151,7 @@ if ($loggedIn){
 }	
 ?>
 
-<label id="text_label">Sisesta tervitusteksti: </label>
+<label id="text_label">Greeting: </label>
 <textarea rows="6" cols="50" id="ch_greeting" name="ch_greeting" form="ch_form">
 <?=htmlentities($greeting,ENT_QUOTES)?>
 </textarea>
