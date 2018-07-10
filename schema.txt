@@ -1,0 +1,24 @@
+CREATE TABLE IF NOT EXISTS kylastus_142463 (
+  id int(7) NOT NULL AUTO_INCREMENT,
+  `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  kylastaja_id int(11) NOT NULL,
+  kylastatu_id int(11) NOT NULL,
+  hinnang char(1) CHARACTER SET utf8 COLLATE utf8_estonian_ci NOT NULL,
+  PRIMARY KEY (id)
+);
+
+
+CREATE TABLE IF NOT EXISTS kasutaja_142463 (
+  id int(7) NOT NULL AUTO_INCREMENT,
+  kasutajanimi varchar(15) COLLATE utf16_estonian_ci NOT NULL,
+  parool varchar(30) COLLATE utf16_estonian_ci NOT NULL,
+  eesnimi varchar(70) COLLATE utf16_estonian_ci DEFAULT NULL,
+  perekonnanimi varchar(70) COLLATE utf16_estonian_ci DEFAULT NULL,
+  email varchar(50) COLLATE utf16_estonian_ci NOT NULL,
+  sugu char(1) CHARACTER SET utf8 COLLATE utf8_esperanto_ci DEFAULT NULL,
+  pilt longblob,
+  tervitus text COLLATE utf16_estonian_ci,
+  PRIMARY KEY (id),
+  UNIQUE KEY kasutajanimi (kasutajanimi),
+  UNIQUE KEY email (email)
+)

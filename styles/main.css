@@ -1,0 +1,267 @@
+body, html{
+	height:100%;
+	padding:0;
+	margin:0;
+	background-image: url(../images/mountains.jpg);
+	background-position: 0% 20%; 
+}
+.login{
+	display:block;
+	width:45px;
+	margin-top:60px;
+	margin-left:auto;
+	margin-right:auto;
+	-moz-box-shadow:inset 0px 1px 0px 0px #fce2c1;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #fce2c1;
+	box-shadow:inset 0px 1px 0px 0px #fce2c1;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffc477), color-stop(1, #fb9e25));
+	background:-moz-linear-gradient(top, #ffc477 5%, #fb9e25 100%);
+	background:-webkit-linear-gradient(top, #ffc477 5%, #fb9e25 100%);
+	background:-o-linear-gradient(top, #ffc477 5%, #fb9e25 100%);
+	background:-ms-linear-gradient(top, #ffc477 5%, #fb9e25 100%);
+	background:linear-gradient(to bottom, #ffc477 5%, #fb9e25 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffc477', endColorstr='#fb9e25',GradientType=0);
+	background-color:#ffc477;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #eeb44f;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #cc9f52;
+}
+
+#submit{
+	margin-top:30px;
+	margin-bottom:30px;
+	-moz-box-shadow:inset 0px 1px 0px 0px #fce2c1;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #fce2c1;
+	box-shadow:inset 0px 1px 0px 0px #fce2c1;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffc477), color-stop(1, #fb9e25));
+	background:-moz-linear-gradient(top, #ffc477 5%, #fb9e25 100%);
+	background:-webkit-linear-gradient(top, #ffc477 5%, #fb9e25 100%);
+	background:-o-linear-gradient(top, #ffc477 5%, #fb9e25 100%);
+	background:-ms-linear-gradient(top, #ffc477 5%, #fb9e25 100%);
+	background:linear-gradient(to bottom, #ffc477 5%, #fb9e25 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffc477', endColorstr='#fb9e25',GradientType=0);
+	background-color:#ffc477;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #eeb44f;
+	cursor:pointer;
+	color:#ffffff;
+	display:inline-block;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #cc9f52;
+}
+
+#opinion{
+	margin-top:30px;
+	margin-bottom:30px;
+	-moz-box-shadow:inset 0px 1px 0px 0px #fce2c1;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #fce2c1;
+	box-shadow:inset 0px 1px 0px 0px #fce2c1;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffc477), color-stop(1, #fb9e25));
+	background:-moz-linear-gradient(top, #ffc477 5%, #fb9e25 100%);
+	background:-webkit-linear-gradient(top, #ffc477 5%, #fb9e25 100%);
+	background:-o-linear-gradient(top, #ffc477 5%, #fb9e25 100%);
+	background:-ms-linear-gradient(top, #ffc477 5%, #fb9e25 100%);
+	background:linear-gradient(to bottom, #ffc477 5%, #fb9e25 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffc477', endColorstr='#fb9e25',GradientType=0);
+	background-color:#ffc477;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #eeb44f;
+	cursor:pointer;
+	color:#ffffff;
+	display:inline;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #cc9f52;
+}
+.login:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fb9e25), color-stop(1, #ffc477));
+	background:-moz-linear-gradient(top, #fb9e25 5%, #ffc477 100%);
+	background:-webkit-linear-gradient(top, #fb9e25 5%, #ffc477 100%);
+	background:-o-linear-gradient(top, #fb9e25 5%, #ffc477 100%);
+	background:-ms-linear-gradient(top, #fb9e25 5%, #ffc477 100%);
+	background:linear-gradient(to bottom, #fb9e25 5%, #ffc477 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fb9e25', endColorstr='#ffc477',GradientType=0);
+	background-color:#fb9e25;
+}
+.login:active {
+	position:relative;
+	top:1px;
+}
+
+#container{
+	-moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+    box-sizing: border-box; 
+	background-color:white;
+	padding-top:100px;
+	padding-left:70px;
+	padding-right:70px;
+	margin-top:0;
+	margin-bottom:0;
+	margin-left:auto;
+	margin-right:auto;
+	width:50%;
+	height:100%;
+	overflow: auto;
+
+}
+h1{
+	color: #0E18AB;
+	margin-bottom:40px;
+}
+#headerOne{
+	
+	text-align:center;
+  background-color: #FFFFFF;
+  font-family: 'arial';
+  font-style: normal;
+  font-weight: bolder;
+  font-size: 60px;
+  font-variant: normal;
+  line-height: 25px;
+  text-transform: uppercase;
+}
+
+a{ 
+margin-top:30px;
+color:#993300; 
+text-decoration:none; 
+border-bottom: 1px dashed #993300; 
+}
+
+a:hover { 
+border-bottom: 1px solid #993300; 
+}
+
+#pic1, #pic2{
+	display:block;
+  opacity: 0.5;
+}
+
+#pic1{
+	width:80%;
+}
+
+#user{
+	display:inline;
+	margin:5px;
+}
+
+#pass{
+	display:inline;
+	margin: 5px;
+}
+
+#userLabel{
+	display:inline;
+}
+
+#passLabel{
+	display:inline;
+}
+ol{
+	list-style-type:none;
+}
+
+ol li{
+	margin-bottom:10px;
+}
+
+#portrait{
+	border-image-slice: 15 15 15 15; 
+	border-image-width: 10px 10px 10px 10px; 
+	border-image-outset: 0px 0px 0px 0px; 
+	border-image-repeat: round round; 
+	border-image-source: url("https://mdn.mozillademos.org/files/6011/border-image-3.png");
+	padding:1%;
+	position:relaive;
+	top:0;
+	left:0;
+	transform:translate(0,0);
+	width:25%;
+	margin-top:30px;
+	margin-bottom:30px;
+}
+#message_about_visiting{
+	padding:0;
+	margin:0;
+}
+
+#visitors_table{
+	border:1px solid black;
+	display:block-table;
+	padding:0;
+	margin-top:20px;
+	margin-bottom:0;
+	border-collapse:collapse;
+}
+
+#visitors_table tr td{
+	border:1px solid black;
+	padding:7px;
+	
+}
+
+#visitors{
+	margin-top:50px;
+
+	position:relaive;
+	top:0;
+	left:0;
+	
+}
+
+input[type="text"], input[type="password"], input[type="email"],textarea,input[type="file"]{
+	display:block;
+	margin-bottom:10px;
+}
+
+input[type="radio"]{
+	margin-bottom:10px;
+}
+
+#gender_label,#picture_label,#text_label{
+	display:block;
+}
+form{
+	margin-top:20px;
+	margin-bottom:20px;
+}
+
+.index{
+	display:block;
+	width:45px;
+	margin-bottom:60px;
+}
+button{
+	display:block;
+}
+
+#opinion_form{
+	display:inline;
+	margin-right:30px;
+}
+
+#opinion_div{
+	display:block;
+}
